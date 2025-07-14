@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				/* Custom Terra Café cultural colors */
+				coffee: {
+					bean: 'hsl(var(--coffee-bean))',
+					warm: 'hsl(var(--earth-warm))'
+				},
+				cultural: {
+					gold: 'hsl(var(--cultural-gold))',
+					cream: 'hsl(var(--heritage-cream))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +77,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'crimson': ['Crimson Text', 'serif'],
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--gradient-hero)',
+				'cultural-gradient': 'var(--gradient-cultural)',
+				'warm-gradient': 'var(--gradient-warm)',
 			},
 			keyframes: {
 				'accordion-down': {

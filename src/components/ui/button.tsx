@@ -18,6 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        /* Terra Café Cultural Variants */
+        cultural: "bg-cultural-gold text-coffee-bean font-semibold hover:bg-cultural-gold/90 cultural-shadow cultural-transition",
+        heritage: "bg-warm-gradient text-coffee-bean font-medium hover:scale-105 cultural-transition",
+        explorer: "bg-coffee-bean text-cultural-cream border border-primary hover:bg-primary hover:text-primary-foreground cultural-transition",
+        modern: "bg-card text-cultural-gold border border-cultural-gold/20 hover:bg-cultural-gold hover:text-coffee-bean cultural-transition warm-shadow",
       },
       size: {
         default: "h-10 px-4 py-2",

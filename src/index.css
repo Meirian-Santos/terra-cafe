@@ -8,35 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Terra Café Color Palette - Inspired by global coffee culture */
+    --background: 28 15% 8%;           /* Rich dark charcoal */
+    --foreground: 30 8% 85%;           /* Warm cream text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 28 18% 12%;                /* Slightly lighter dark for cards */
+    --card-foreground: 30 8% 85%;      /* Cream text on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 28 18% 12%;
+    --popover-foreground: 30 8% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Copper tones */
+    --primary: 25 65% 45%;             /* Rich copper */
+    --primary-foreground: 28 15% 8%;   /* Dark text on copper */
+    --primary-glow: 25 75% 55%;        /* Lighter copper for effects */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Terracotta */
+    --secondary: 15 55% 50%;           /* Warm terracotta */
+    --secondary-foreground: 30 8% 85%; /* Light text on terracotta */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Petrol blue */
+    --muted: 195 25% 25%;              /* Deep petrol blue */
+    --muted-foreground: 30 8% 70%;     /* Muted cream text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Warm terracotta variant */
+    --accent: 15 45% 35%;              /* Darker terracotta accent */
+    --accent-foreground: 30 8% 85%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 28 15% 20%;              /* Subtle dark border */
+    --input: 28 15% 15%;               /* Dark input background */
+    --ring: 25 65% 45%;                /* Copper focus ring */
 
-    --radius: 0.5rem;
+    /* Custom cultural colors */
+    --coffee-bean: 25 30% 15%;         /* Deep coffee brown */
+    --earth-warm: 35 25% 25%;          /* Warm earth tone */
+    --cultural-gold: 45 75% 55%;       /* Golden accent */
+    --heritage-cream: 30 15% 90%;      /* Light heritage cream */
+
+    /* Gradients for visual impact */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-cultural: linear-gradient(180deg, hsl(var(--coffee-bean)), hsl(var(--accent)));
+    --gradient-warm: linear-gradient(45deg, hsl(var(--secondary)), hsl(var(--cultural-gold)));
+
+    /* Shadows with cultural warmth */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--primary) / 0.4);
+    --shadow-cultural: 0 0 40px hsl(var(--cultural-gold) / 0.3);
+    --shadow-depth: 0 20px 60px -20px hsl(var(--coffee-bean) / 0.6);
+
+    /* Smooth cultural transitions */
+    --transition-cultural: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +126,114 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Cultural design components */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .cultural-gradient {
+    background: var(--gradient-cultural);
+  }
+
+  .warm-gradient {
+    background: var(--gradient-warm);
+  }
+
+  .cultural-shadow {
+    box-shadow: var(--shadow-cultural);
+  }
+
+  .warm-shadow {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .depth-shadow {
+    box-shadow: var(--shadow-depth);
+  }
+
+  .cultural-transition {
+    transition: var(--transition-cultural);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  /* Coffee bean animation */
+  @keyframes coffee-steam {
+    0%, 100% { 
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% { 
+      transform: translateY(-10px) scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes cultural-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--cultural-gold) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--cultural-gold) / 0.6);
+    }
+  }
+
+  @keyframes heritage-pulse {
+    0%, 100% { 
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% { 
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  .coffee-steam {
+    animation: coffee-steam 3s ease-in-out infinite;
+  }
+
+  .cultural-glow {
+    animation: cultural-glow 4s ease-in-out infinite;
+  }
+
+  .heritage-pulse {
+    animation: heritage-pulse 2s ease-in-out infinite;
+  }
+
+  /* Typography for cultural richness */
+  .heading-cultural {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .text-cultural {
+    color: hsl(var(--cultural-gold));
+  }
+
+  .text-heritage {
+    color: hsl(var(--heritage-cream));
+  }
+
+  /* Interactive elements */
+  .cultural-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-cultural);
+    transition: var(--transition-cultural);
+  }
+
+  .warm-hover:hover {
+    background: var(--gradient-warm);
+    transform: scale(1.05);
+    transition: var(--transition-smooth);
   }
 }
