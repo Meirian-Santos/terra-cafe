@@ -17,7 +17,7 @@ const CulturalShowcase = () => {
       country: "Japão",
       tradition: "Café Siphon",
       description: "A precisão japonesa transforma o preparo em uma performance meditativa.",
-      image: "https://images.unsplash.com/photo-1545665777-b71d1bceed4a?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop",
       color: "from-slate-600 to-blue-800",
       duration: "20 min",
       participants: "1-4 pessoas"

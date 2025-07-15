@@ -14,7 +14,6 @@ const Navigation = () => {
     { name: 'Roteiro pelo Mundo', href: '/roteiro', icon: Globe },
     { name: 'Menu de Experiências', href: '/menu', icon: BookOpen },
     { name: 'Loja & Arte', href: '/loja', icon: ShoppingBag },
-    { name: 'Comunidade', href: '/comunidade', icon: Users },
   ];
 
   const isActive = (path: string) => location.pathname === path;
