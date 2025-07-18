@@ -3,6 +3,9 @@
 Este site foi desenvolvido como parte do meu portfólio como Web Designer, com foco em identidade visual e navegação intuitiva.  
 O projeto simula um site para uma cafeteria fictícia chamada **Terra Café**, que valoriza experiências culturais autênticas e grãos premium de todo o planeta.
 
+![preveiw do site Terra Café](public/terracafe.jpg)
+
+
 ---
 
 ## 🧠 Sobre o desenvolvimento
